@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!--
+	Student Name: Rylee Leavitt
+	File Name: calculator.html
+	Date: 10/10/2024
+ -->
+
+<html lang="en">
+	<head>
+		<title>Personal Portfolio: Home</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+
+		<!-- Use the nav area to update webpages -->
+         <!-- Use the main area to add the main content of the webpage -->
+		<nav>
+			<main>
+                <form id="tipCalculatorForm">
+                    <h1>Tip Calculator</h1>
+                    <label for="billAmount">Bill Amount:</label>
+                    <input type="number" id="billAmount" name="billAmount" required>
+                    <label for="serviceQuality">Service Quality:</label>
+                    <select id="serviceQuality" name="serviceQuality">
+                    <option value="0.25">Excellent (25%)</option>
+                    <option value="0.20">Good (20%)</option>
+                    <option value="0.15">Fair (15%)</option>
+                    <option value="0.10">Poor (10%)</option>
+                </select>
+
+                <button type="button" onclick="calculateTip()">Calculate Tip</button>
+                </form>
+                <script>
+                    function calculateTip() {
+                        let billAmount = document.getElementById('billAmount').value;
+                        let serviceQuality = document.getElementById('serviceQuality').value;
+
+                        console.log(`Bill Amount: ${billAmount}`);
+                        console.log(`Service Quality: ${serviceQuality}`);
+                    }
+        </script>
+    </main>
+</body>
+</html>
+
+		<!-- Use the footer area to add static footer content, such as email and copyright info. -->
+		<footer>
+
+            
+		</footer>
+
+	</body>
+</html><!DOCTYPE html>
+
