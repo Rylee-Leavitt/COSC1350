@@ -1,0 +1,94 @@
+/*
+Author: Rylee Leavitt
+Date: 10/10/2024
+File Name: styles.css
+*/
+
+/* Basic reset */
+Margin, padding, box {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the heading */
+h1 {
+    font-weight: normal;    /*changes font weight of h1*/
+    font-size: 50px;        /*changes font size of h1*/
+    text-align: center;     /*aligns text to the center*/
+    margin-bottom: 20px;    /*changes bottom margin*/
+    color: #3ba9b6;       /*changes font color*/
+}
+
+/* Style the body */
+body {
+    font-family: Brush Script MT, cursive;                  /*sets the font style*/
+    background-image: url('images/angelsbackground.png');   /*sets a background image from the loacal images folder*/
+    background-size: cover;                                 /* Scales the image to cover the whole screen */
+    background-repeat: no-repeat;                           /* Ensures the image doesn’t repeat */
+    background-position: center center;                     /* Centers the image */
+    color: #3ba9b6;                                       /*text color*/
+    font-size: 25.5px;                                      /*font size*/
+    line-height: 1.6;                                       /*changes line height*/
+    padding: 20px;                                          /*changes the body padding*/
+}
+
+/* Style the form */
+form {
+    background: #ffffffa6;      /*changes the background color of the form*/
+    padding: 20px;                /*changes padding/height of the form*/
+    border-radius: 10px;          /*changes the border radius of the form*/
+    max-width: 500px;             /*changes max-width of the form*/
+    margin: 20px auto;            /*changes the margin of the form*/
+}
+
+/* Style form elements */
+label {
+    display: block;         /*changes the display of the form to block*/
+    margin-bottom: 10px;    /*changes the bottom margin*/
+    font-weight: normal;    /*changes font weight*/
+}
+
+/* Style the bill amount input box */
+input[type="number"],
+select {
+    width: 90%;                         /*changes width of bill amount input box*/
+    padding: 10px;                      /*changes bill amount input box height*/
+    margin-bottom: 20px;                /*changes bottom margin*/
+    border: 1.5px solid #78d6e0;      /*changes border around bill amount input box*/
+    border-radius: 5px;                 /*changes border radius in px around bill amount input box*/
+}
+
+/* Style the Service quaity input box */
+option [value="number"],
+select {
+    width: 95%;                         /*changes width of Service quaity input box*/
+    padding: 10px;                      /*changes Service quaity input box height*/
+    margin-bottom: 20px;                /*changes bottom margin*/
+    border: 1.5px solid #78d6e0;      /*changes border around Service quaity input box*/
+    border-radius: 5px;                 /*changes border radius in px around Service quaity input box*/
+}
+
+/* Style the button */
+button {
+    display: block;
+    font-family: Brush Script MT, cursive;      /*changes font*/
+    font-weight: normal;                        /*changes font weight*/
+    font-size: 30.5px;                          /*changes font size*/
+    width: 95%;                                 /*changes button width*/
+    background: #78d6e0;                      /*changes button background color*/
+    color: #fff;                              /*changes text color*/
+    padding: 10px;                              /*changes button height*/
+    border: none;                               /*changes border to none*/
+    border-radius: 0px;                         /*changes border radius*/
+}
+
+/* Hover effect for button */
+button:hover {
+    background: #3ba9b6;  /*changes background color of the button when hovering over it*/
+}
+
+#output { 
+    margin-top: 20px; 
+    font-size: 25.5px; 
+}

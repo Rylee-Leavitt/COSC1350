@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+	Student Name: Rylee Leavitt
+	File Name: calculator.html
+	Date: 11/18/2024
+ -->
+ 
+ <html lang="en">
+ <head>
+     <title>Tip Calculator</title>
+     <meta charset="utf-8">
+     <link rel="stylesheet" type="text/css" href="styles.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="calculator.js" defer></script>
+ </head>
+ <body>
+     <div class="calculator">
+         <form id="tipCalculatorForm">
+             <h1>Tip Calculator</h1>
+             <label for="billAmount">Bill Amount:</label>
+             <input type="number" id="billAmount" name="billAmount" required>
+             <label for="serviceQuality">Service Quality:</label>
+             <select id="serviceQuality" name="serviceQuality">
+                 <option value="0.25">Excellent (25%)</option>
+                 <option value="0.20">Good (20%)</option>
+                 <option value="0.15">Fair (15%)</option>
+                 <option value="0.10">Poor (10%)</option>
+             </select>
+             <button id="calculateTip" type="button">Calculate Tip</button>
+             <p id="output"></p>
+         </form>
+     </div>
+ </body>
+ </html>
+ 
