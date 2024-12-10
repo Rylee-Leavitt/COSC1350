@@ -30,6 +30,7 @@ document.getElementById('submitGuess').addEventListener('click', function() {
 
     if (userGuess === randomNumber) { // If the user's guess equals the randomly generated number, this code will execute
         resultMessage.textContent = 'Congratulations! You guessed the number!';
+        document.getElementById('submitGuess').style.display = 'none'; // Hide the "Submit Guess" button
         endGame();
     } else if (guesses.length >= maxGuesses) { 
         // If the user's guess does not equal the randomly generated number and the max guesses have been made, this code will execute
