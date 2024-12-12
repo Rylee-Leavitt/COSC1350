@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Draw Shapes on Canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="600" style="border:1px solid #000000;"></canvas>
+<script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function drawTrapezoid(x, y, topWidth, bottomWidth, height) {
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x + topWidth, y);
+        ctx.lineTo(x + bottomWidth, y + height);
+        ctx.lineTo(x - (bottomWidth - topWidth), y + height);
+        ctx.closePath();
+        ctx.stroke();
+    }
+
+    function drawRedDiamond(x, y, width, height) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(Math.PI / 4); // 45 degrees
+        ctx.fillStyle = 'red';
+        ctx.fillRect(-width / 2, -height / 2, width, height);
+        ctx.restore();
+    }
+
+    function drawZigzag(x, y, length, segments) {
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        for (let i = 0; i < segments; i++) {
+            x += length / segments;
+            y += (i % 2 === 0) ? length / segments : -length / segments;
+            ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+    }
+
+    function drawSpiral(x, y, segments, segmentLength) {
+        ctx.beginPath();
+        let angle = 0;
+        for (let i = 0; i < segments; i++) {
+            angle += (Math.PI * 2) / segments;
+            x += segmentLength * Math.cos(angle);
+            y += segmentLength * Math.sin(angle);
+            ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+    }
+
+    function drawYellowStar(cx, cy, spikes, outerRadius, innerRadius) {
+        const step = Math.PI / spikes;
+        let rotation = Math.PI / 2 * 3;
+        let x = cx;
+        let y = cy;
+
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - outerRadius);
+
+        for (let i = 0; i < spikes; i++) {
+            x = cx + Math.cos(rotation) * outerRadius;
+            y = cy + Math.sin(rotation) * outerRadius;
+            ctx.lineTo(x, y);
+            rotation += step;
+
+            x = cx + Math.cos(rotation) * innerRadius;
+            y = cy + Math.sin(rotation) * innerRadius;
+            ctx.lineTo(x, y);
+            rotation += step;
+        }
+        ctx.lineTo(cx, cy - outerRadius);
+        ctx.closePath();
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = 'yellow';
+        ctx.stroke();
+        ctx.fillStyle = 'yellow';
+        ctx.fill();
+    }
+
+    // Draw shapes
+    drawTrapezoid(100, 100, 100, 150, 75);
+    drawRedDiamond(300, 100, 50, 50);
+    drawZigzag(400, 100, 200, 10);
+    drawSpiral(600, 100, 100, 5);
+    drawYellowStar(700, 200, 5, 50, 25);
+</script>
+</body>
+</html>
