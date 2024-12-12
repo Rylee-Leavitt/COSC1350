@@ -1,0 +1,90 @@
+/*
+Author: Rylee Leavitt
+Date: 12/11/24
+File Name: breakout.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* 
+Remember, since the canvas element has the id=myCanvas, selecting it
+for styling can be as easy as:
+
+ #myCanvas {
+    border-style: solid;
+} 
+    
+Of course, since there will only be one canvas element on the page, you could also just use
+
+canvas {
+    border-style: solid;
+}
+
+Tip: I like to style my homework assignments to match my text editor's theme.
+*/
+
+#myCanvas {
+    
+    border-radius: 20px;        /*changes border radius and rounds the edges*/
+    border-style: none;         /*changes the border style*/
+    background: #1c2236;      /*changes the background color*/
+} 
+
+body {
+    font-family: Garamond, Serif;                           /*sets the font style*/
+    background-image: url('images/starbackground.gif');         /*sets a background image from the local images folder*/
+    background-size: cover;                                 /* Scales the image to cover the whole screen */
+    background-repeat: no-repeat;                           /* Ensures the image doesn’t repeat */
+    background-position: center center;                     /* Centers the image */
+    color: #ffffff;                                       /*text color*/
+    font-size: 25.5px;                                      /*font size*/
+    line-height: 1.6;                                       /*changes line height*/
+    padding: 20px;                                          /*changes the body padding*/
+}
+
+.container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    width: 100%;
+}
+
+h1 { 
+    text-align: center;                     /*aliogns text to the centerof the webpage*/
+    font-family: Lucida Console, Monospace; /*changes font*/
+}
+
+/* Style the button */
+button {
+    display: block;
+    font-family: Lucida Console, Monospace;     /*changes font*/
+    font-weight: normal;                        /*changes font weight*/
+    font-size: 30.5px;                          /*changes font size*/
+    width: 15%;                                 /*changes button width*/
+    background: #a64dff;                      /*changes button background color*/
+    color: #fff;                              /*changes text color*/
+    padding: 10px;                              /*changes button height*/
+    border: none;                               /*changes border to none*/
+    border-radius: 20px;                        /*changes border radius and rounds the edges*/
+    margin: 0 auto;                             /* Centers the button horizontally */
+}
+
+/* Hover effect for button */
+button:hover {
+    background: #3a2e5d;  /*changes background color of the button when hovering over it*/
+    cursor: pointer;        /* Change cursor on hover */
+}
+
+#playAgain {
+    display: none; /* Hide the button initially*/
+}
+
+#startGame {
+    display: none; /* Hide the button initially*/
+}
